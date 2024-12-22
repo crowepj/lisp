@@ -13,6 +13,7 @@ struct MemoryManager {
 };
 
 struct MemoryManager* memmanager_init();
+void memmanager_free(struct MemoryManager* manager);
 struct Expr* mem_allocExpr(struct MemoryManager* manager);
 char* mem_allocConstant(struct MemoryManager* manager, int size);
 char* mem_allocConstantCopy(struct MemoryManager* manager, const char* str);

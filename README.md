@@ -18,3 +18,13 @@ Factorial function
 
 (print "6 factorial is equal to " (fact 6) "\n")
 ```
+
+Average of a list of numbers
+```
+(define avg (lambda (l s n) (
+  (if (null? l)
+    (/ s n)
+    (avg (cdr l) (+ s (car l)) (+ n 1)))
+)))
+(print "Average: " (avg (list 1 2 3 5 10 9) 0 0))
+```
